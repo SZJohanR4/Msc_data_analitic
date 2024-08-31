@@ -12,8 +12,8 @@ class Transcriber():
     output: ../output/transcription_[CODE].txt
     """
     model = self.load_model()
-    print(model,"*********************************")
-    audio_transcribe = model["model"].transcribe(self.mp3_file, language="es")["text"]
+    audio_transcribe = model["model"].transcribe(self.mp3_file, language="es")
+    print(audio_transcribe,"************************")
     with open(model["output_path"], "w") as txt:
       txt.write(audio_transcribe)
     

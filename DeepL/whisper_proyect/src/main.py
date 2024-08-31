@@ -4,10 +4,10 @@ from transcriber import Transcriber
 #By:JohanS_Z
 def main():
   print("Starting converter enjoy!")
-  #converter = Converter("../input/video.mkv")
-  #mp3_file = converter.convert()
+  converter = Converter("../input/video.mkv")
+  mp3_file = converter.convert()
   
-  transcriber = Transcriber("../output/video_954083.mp3")
+  transcriber = Transcriber(mp3_file)
   transcription = transcriber.transcribe()
   
   
